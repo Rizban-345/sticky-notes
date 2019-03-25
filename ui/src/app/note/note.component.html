@@ -1,0 +1,9 @@
+<div class="note">
+  <div class="note_toolbar">
+		<button class="add" title="Add" (click)="addNewNote()">+</button>
+	  <span class="close material-icons" (click)="onDismiss($event)">X</span>
+  </div>
+	<div class="content" contenteditable="true" (blur)="onFocusOut($event)">
+		<ng-content></ng-content>
+	</div>
+</div>

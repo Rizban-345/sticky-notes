@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="jumbotron">
+    <h3>Sticky Notes</h3>
+    <div  class="toolbar" id="toolbar" tabindex="0">
+      <!-- <button class="add material-icons btn btn-primary" (click)="addNote()" >
+        <i class="fa fa-plus"></i> Add</button> -->
+    </div>
+    <div class="app">
+      <app-note *ngFor="let note of notes" (add)="addNote()" (dismiss)="deleteNote($event)" (focusout)="saveNote($event)" id="{{note.id}}">{{note.content}}</app-note>
+    </div>
+  </div>
+</div>
